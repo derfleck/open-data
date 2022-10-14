@@ -15,9 +15,5 @@ jobs:
     steps:
       - name: Run wget
         run:  wget "https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv" --cipher 'DEFAULT:!DH' >> test.csv
-      - name: Add to git
-        run:  git add test.csv
-      - name: Commit
-        run:  git commit -m 'added test.csv'
-      - name: Push
-        run:  git push origin master
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.1
