@@ -7,8 +7,12 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - uses: actions/checkout@v3
       - uses: wow-actions/download-upload@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv
+          filename: ${{ steps.date.outputs.date }}.csv
