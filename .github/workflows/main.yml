@@ -1,0 +1,17 @@
+# the gh-action
+name: Test downloa
+
+# Controls when the action will run.
+on:
+  schedule:
+    - cron:  "0 10 * * *"
+  workflow_dispatch:
+
+
+jobs:
+  runscript:
+    name: Example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run wget
+        run:  wget "https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv" >> ${GITHUB_WORKSPACE}/test.csv
