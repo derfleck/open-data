@@ -102,3 +102,24 @@ jobs:
           filename: ${{ steps.date.outputs.date }}.csv
           dir: Hospitalisierung
           commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFaelleDelta.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFaelleDelta
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFallzahlen.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFallzahlen
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/Version.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: Version
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
