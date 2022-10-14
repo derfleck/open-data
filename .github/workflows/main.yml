@@ -25,3 +25,80 @@ jobs:
           filename: ${{ steps.date.outputs.date }}.csv
           dir: COVID19_vaccination_doses_timeline_v202206
           commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/COVID19_vaccination_doses_agegroups_v202206.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: COVID19_vaccination_doses_agegroups_v202206
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/COVID19_vaccination_according_to_recommendation.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: COVID19_vaccination_according_to_recommendation
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/COVID19_vaccination_municipalities_v202206.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: COVID19_vaccination_municipalities_v202206
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/timeline-bbg.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: timeline-bbg
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: timeline-testungen-bundeslaender
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://info.gesundheitsministerium.gv.at/data/timeline-testungen-apotheken-betriebe.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: timeline-testungen-apotheken-betriebe
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFaelle_Altersgruppe.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFaelle_Altersgruppe
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFaelle_GKZ.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFaelle_GKZ
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFaelle_Timeline
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline_GKZ.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: CovidFaelle_Timeline_GKZ
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://covid19-dashboard.ages.at/data/Hospitalisierung.csv
+          filename: ${{ steps.date.outputs.date }}.csv
+          dir: Hospitalisierung
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
