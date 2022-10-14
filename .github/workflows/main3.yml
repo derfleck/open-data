@@ -17,4 +17,4 @@ jobs:
           url: https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv
           filename: ${{ steps.date.outputs.date }}.csv
           dir: timeline-testungen-bundeslaender
-          commit_message: 'downloaded on ${{ steps.date.outputs.date }}'
+          commit_message: 'downloaded on ${{ github.event.repository.updated_at}}'
