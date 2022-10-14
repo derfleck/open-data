@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run wget
-        run:  wget "https://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv" >> ${GITHUB_WORKSPACE}/test.csv
+        run:  wget "http://info.gesundheitsministerium.gv.at/data/timeline-testungen-bundeslaender.csv" >> ${GITHUB_WORKSPACE}/test.csv
